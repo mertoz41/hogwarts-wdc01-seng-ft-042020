@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 
-class Filter extends Component {
-
-
-
-    
-  render() {
-      return(
+class Filter extends Component { 
+    render(){
+      return (
         <div>
-            <input type="checkbox" id="myCheck" onclick="myFunction()">
+          Filter Greased Hogs:<input type="checkbox" onClick={this.props.changeFilter}></input>
         </div>
 
-        )
-  }
-}
+      )}}
+      
+
+
+export default Filter
