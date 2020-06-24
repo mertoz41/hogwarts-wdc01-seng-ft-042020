@@ -15,21 +15,27 @@ class HogContainer extends Component {
   changeFilter = () => {
     const greasedPigs = hogs.filter(hog => hog.greased === true
      )
-   
+     let filter 
+    if (this.state.filter === "greased") {
+      filter = "all"
+    } else {
+      filter = "greased"
+    }
     this.setState({
       greased: greasedPigs,
-      filter: "greased"
+      filter: filter
     })
-
   }
+  
   render() {
     console.log(this.state.filter)
+    // debugger
     return (
       <div className="ui grid container">
       <Filter changeFilter={this.changeFilter}/>
       <h1>Hog Container </h1>
 
-      {this.state.filter = "all" ? 
+      {this.state.filter === "all" ? 
       
           hogs.map(hog => {
             return (
