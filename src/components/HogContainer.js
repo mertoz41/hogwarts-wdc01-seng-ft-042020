@@ -3,6 +3,9 @@ import hogs from "../porkers_data";
 import Hog from './Hog'
 class HogContainer extends Component {
   
+
+
+
   render() {
     
     return (
@@ -10,7 +13,7 @@ class HogContainer extends Component {
       <h1>Hog Container </h1>
         {hogs.map(hog => {
           return (
-         < Hog name={hog.name} specialty={hog.specialty} weight={hog.weight} greased={hog.greased}/>
+         < Hog detail={this.detail} name={hog.name} specialty={hog.specialty} weight={hog.weight} greased={hog.greased}/>
          
           )
         })}
